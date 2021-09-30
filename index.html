@@ -7,25 +7,100 @@
     <title>Kevin Tousey Portfolio</title>
 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="container">
     <header>
 <nav>
     <ul>
-        <li><a href="#">Background</li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Repositories</a></li>
-        <li><a href="#">Social Media</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="./Documents/Resume - Kevin Tousey.pdf">Resume</a></li>
+        <li><a href="#repositories">Repositories</a></li>
+        <li><a href="#social">Social Media</a></li>
     </ul>
 </nav>
     </header>
+    <section>
+        <!--Background-->
     <div class="container hero">
-        <h2>Welcome to My Portfolio Website on Github</h2>
-        <p>There's a hero here.</p>
         <img src="/images/office-hero.jpg" alt="office background">
+        <div class="hero-text">
+        <!-- <h2>Welcome to My Portfolio Website on Github</h2> -->
+        <h2>My Name is Kevin Tousey and I'm a Software Developer...</h2>
+        
     </div>
+    </div>
+</section>
+
+<section id="background">
+    <!--replace with headshot-->
+    <img src="./images/person.png" alt="person standing">
+    <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+        I am a Software developer with a degree in engineering and  experience in mechanical drafting and design. I  currently work part time in assembly and am finishing my software development bootcamp.  I am experienced at working on technical projects and managing
+        customer communications as an integral part of the daily workflow.  I am looking to work as a software developer for a company that focuses on team growth and development.</p>
+</div>
+</section>
+
+   <section class = "repositories" id="repositories">
+    <!--Repositories and codes with link to external webpage portfolio-->
    
+    <div class="repository-text">
+    <h2>My Repositories</h2>
+
+    <p>While attending my C# full stack bootcamp, I created the following Github repositories for the projects that we worked on.</p>
+ 
+    <ul>
+        <li><a href="https://github.com/2021-Fall-Cohort/m1-virtual-pet-team-money" target = "_blank">Virtual Pet</a></li>
+        <li><a href="https://github.com/WeCanCodeIT/Summer-2021-Class-Of-Your-Choice" target = "_blank">Choose Your Class</a></li>
+        <li><a href="https://github.com/KPTousey/KPTousey.github.io" target = "_blank">Github Page</a></li>
+
+    </ul>
+
+    <h3>Virtual Pet</h3>
+    <p>This is a C# application written to simulate having your own computerized pet in a shelter right up to adoption.</p>
+    <h3>Choose Your Class</h3>
+    <p>This is a C# application that uses object oriented programming to simulate a task list style interface for tracking maintenance projects.</p>
+    <h3>Github Page</h3>
+    <p>This is the location for all the project files used to create and mount my portfolio site on Github.</p>
+<p><em>Check out some of my web development projects below:</em></p>
+    <a href="http://www.ktousey-web.tech/" target="_blank">Front End Portfolio</a>
+</div>
+
+<img src="./images/code.jpg" width="600px" alt="">
+</section>
+
+
+   <section id="social" class="social">
+    <!--Social Media Links-->
+    <img class="thank__you--image" src="./images/thankyou.jpg" alt="">
+    
+    <div class="social-text">
+    <h2>Social Media</h2>
+       <!--Thank you image-->
+    
+      <div class="media-icon">
+       <!--linkedin-->
+       <a href="https://www.linkedin.com/in/kevin-tousey-61b62b46/" target="_blank">
+       <img src="./images/linkedin.png" width="75px" alt="linkedin icon"></a>
+        <!--github-->
+        <a href="https://github.com/KPTousey" target="_blank">
+        <img src="./images/github.png" width="75px" alt="github icon"></a>
+         <!--twitter-->
+         <a href="https://twitter.com/__KTWeb__" target="_blank">
+         <img src="./images/twitter.png" width="75px" alt="twitter icon"></a>
+        </div>
+        <div class="quoteContainer">
+        <blockquote>“For me, I am driven by two main philosophies: know more today about the world than I knew yesterday and lessen the suffering of others. You'd be surprised how far that gets you.” </blockquote>
+        <p>― Neil deGrasse Tyson </p>
+    </div>
+        </div>
+   </section>
+   <footer>
+    <p><span id="small">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span><p></p>
+   </footer>
 </div> <!-- page container-->
 </body>
 </html>
