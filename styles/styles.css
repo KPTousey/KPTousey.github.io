@@ -1,24 +1,150 @@
 html {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     box-sizing: border-box;
 }
 
-nav ul>li {
+h2 {
+    color:rgb(37, 37, 37);
+    font-size: 4.5em;
+    text-shadow: 2px 2px rgb(194, 186, 186);
+}
+
+nav {
+    position: relative;
+    top: -10px;
+    background-color: rgb(209, 240, 240);
+    padding: 5px;
+    text-align: center;
+}
+
+nav a {
+    padding: 0;
+    text-decoration: none;
+    color: rgb(110, 110, 172);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+nav ul {
     display: inline;
+    list-style: none;
 }
 
 a {
-    
+    margin: 2em;
+}
+
+a:hover {
+    color:lightcyan;
 }
 
 .container {
     background-color: antiquewhite;
-    width: 80vw;
-    text-align: center;
+    width: 99vw;
     margin: 0 auto;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-img {
-    width: 100%;
+.about-text {
+    line-height: 2em;
+    width: 60%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 35vh;
+    left: 25vh;
+    max-width: 80vw;
+}
+
+.hero > img {
+    max-width: 100%;
+    filter: grayscale(100%);
+    filter:blur(4px);
+    filter:opacity(30%);
+    
+}
+
+#background, #social {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(204, 204, 221);
+    width: 90vw;
+    margin: 2em auto;
+    filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));
+}
+
+#background>img {
+    margin-top: 2em;
+    border: 2px solid black;
+  
+}
+
+.media-icon>img {
+    margin: 2em;
+}
+
+
+#repositories {
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    margin: 2em auto;
+}
+
+.about-text {
+    width: 60vw;
+    padding: 2em;
+    margin: 3em;
+}
+
+#background > img {
+    height: 50vh;
+}
+
+.repositories > img {
+    filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));   
+}
+
+.social-text {
+    text-align: center;
+}
+
+.thank__you--image {
+margin: 2em;
+    width: 20vw;
+}
+
+
+#small {
+    font-size: 12px;
+}
+
+#small>a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer > a {
+    text-decoration: none;
+    color: white;
+}
+
+.quoteContainer {
+    width: 60vw;
+    text-align: center;
+    margin: 10px;
+    line-height: 1.5em;
 }
