@@ -10,17 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="container">
-    <header>
-<nav>
-    <ul>
+    
+    <!-- <header> -->
+<nav id="hamnav">
+    <!-- <ul>
         <li><a href="#background">Background</a></li>
         <li><a href="./Documents/Resume - Kevin Tousey.pdf">Resume</a></li>
         <li><a href="#repositories">Repositories</a></li>
         <li><a href="#social">Social Media</a></li>
-    </ul>
+    </ul> -->
+    <!--hamburger menu-->
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+
+    <div id="hamitems">
+      <a href="#background">Background</a>
+      <a href="./Documents/Resume - Kevin Tousey.pdf">Resume</a>
+      <a href="#repositories">Repositories</a>
+      <a href="#social">Social Media</a>
+    </div>
+    <!-- end of hamburger menu-->
 </nav>
-    </header>
+
+<div class="container">
+    <!-- </header> -->
     <section>
         <!--Background-->
     <div class="container hero">
@@ -29,18 +42,22 @@
         <!-- <h2>Welcome to My Portfolio Website on Github</h2> -->
         <h2>My Name is Kevin Tousey and I'm a Software Developer...</h2>
         <h1>Here's a list of my technical skills:</h1>
-        <h4>C# • .NET Core • Active Server Pages / ASP.net • JavaScript</h4>
-        <h4>Flexbox • MVC • HTML • CSS • Grid • Test Driven Development (TDD)</h4> 
-        <h4>Agile (Scrum) • Object Oriented Programming (OOP) • AJAX • JSON</h4>
-        <h4>React • Restful APIs • Responsive Design / Mobile • Relational</h4>
-        <h4>Databases / MS SQL • Source Control / GitHub • Visual Studio IDE</h4>
+        <h4>C# • .NET Core • Active Server Pages / ASP.net • JavaScript •
+        Flexbox • MVC • HTML • CSS • Grid • Test Driven Development (TDD) •
+        Agile (Scrum) • Object Oriented Programming (OOP) • AJAX • JSON •
+        React • Restful APIs • Responsive Design / Mobile • Relational
+        Databases / MS SQL • Source Control / GitHub • Visual Studio IDE</h4>
     </div>
     </div>
+
 </section>
 
+<section class="spacer"></section>
+
 <section id="background">
-    <!--replace with headshot-->
-    <img src="./images/portfolio pic.jpg" alt="Kevin's professional picture">
+    <div class="image-container">
+    <img src="./images/portfolio pic.jpg" width= "200px" alt="Kevin's professional picture">
+</div>
     <div class="about-text">
     <h2>About Me</h2>
     <p>
@@ -55,47 +72,67 @@
 </div>
 </section>
 
-   <section class = "repositories" id="repositories">
+<section class="spacer"></section>
+
+   <section id="repositories">
     <!--Repositories and codes with link to external webpage portfolio-->
    
-    <div class="repository-text">
     <h2>My Repositories</h2>
 <div class="repo-description">
     <p>While attending my C# full stack bootcamp, I created the following Github repositories for the projects that we worked on (<strong>select an image to view the repository</strong>).</p>
 </div>
-<div class="repo-description">
+
+    <div class="virtual-pet">
+        <div class="repo-description">
     <h3>Virtual Pet</h3>
     <p>This is a C# console application written to simulate having your own computerized pet in a shelter right up to adoption.  The code is object oriented and built with class objects.</p>
 </div>
+<div class="repo-image">
+<a href="https://github.com/2021-Fall-Cohort/m1-virtual-pet-team-money" target = "_blank">
+    <img src="./images/VirtualPet.png"  width="300px"  alt="Virtual Pet Application"></a>
+</div>
+</div>
+
+
+<div class="choose-class">
 <div class="repo-description">
         <h3>Choose Your Class</h3>
     <p>This is a C# application that uses object oriented programming to simulate a task list style interface for tracking maintenance projects.  Code uses C# generics and property validation.</p>
    </div>
+   <div class="repo-image">
+   <a href="https://github.com/WeCanCodeIT/Summer-2021-Class-Of-Your-Choice" target = "_blank">
+    <img src="./images/ChooseYourClass.png" width="300px" alt="Choose Your Own Class Application"></a>
+</div>
+</div>
+
+<div class="github-page">
    <div class="repo-description">
     <h3>Github Page</h3>
     <p>This is the location for all the project files used to create and mount my portfolio site on Github.  This project uses HTML tags and CSS styling, including flexbox.</p>
    </div>
+   <div class="repo-image">
+   <a href="https://github.com/KPTousey/KPTousey.github.io" target = "_blank">
+    <img src="./images/PortfolioWebsite.png"  width="300px"  alt="GitPages Website"></a>
+</div>
+</div>
+
 <p><em>Check out some of the web development projects in my...</em></p>
-    <h3><a href="http://www.ktousey-web.tech/" target="_blank">Front End Portfolio</a></h3>
+    <h3><a href="http://www.ktousey-web.tech/"  target="_blank">Front End Portfolio</a></h3>
 </div>
-<div class="repository-images">
-    <a href="https://github.com/2021-Fall-Cohort/m1-virtual-pet-team-money" target = "_blank">
-<img src="./images/VirtualPet.png" alt="Virtual Pet Application"></a>
-<a href="https://github.com/WeCanCodeIT/Summer-2021-Class-Of-Your-Choice" target = "_blank">
-<img src="./images/ChooseYourClass.png" alt="Choose Your Own Class Application"></a>
-<a href="https://github.com/KPTousey/KPTousey.github.io" target = "_blank">
-<img src="./images/PortfolioWebsite.png" alt="GitPages Website"></a>
-</div>
+   
+
+
 </section>
 
+<section class="spacer"></section>
 
-   <section id="social" class="social">
+   <section id="social">
     <!--Social Media Links-->
+    <div class="card">
     <img src="./images/card.jpg" alt="business card">
-    
+</div>
     <div class="social-text">
     <h2>Social Media</h2>
-       <!--Thank you image-->
     
       <div class="media-icon">
        <!--linkedin-->
@@ -108,12 +145,13 @@
          <a href="https://twitter.com/__KTWeb__" target="_blank">
          <img src="./images/twitter.png" width="75px" alt="twitter icon"></a>
         </div>
+    </div>
+</section>
         <div class="quoteContainer">
         <blockquote>“For me, I am driven by two main philosophies: know more today about the world than I knew yesterday and lessen the suffering of others. You'd be surprised how far that gets you.” </blockquote>
         <p>― Neil deGrasse Tyson </p>
-    </div>
         </div>
-   </section>
+  
    <footer>
     <p><span id="small">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></span><p></p>
    </footer>

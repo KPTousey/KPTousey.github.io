@@ -1,36 +1,155 @@
 :root {
-    --dark-color: #1c92d2;
+    --dark-color: hsl(201, 76%, 47%);
     --light-color: rgb(204, 204, 221);
     --alt-color: rgb(219, 179, 179);
 }
 
 html {
+    padding: 0;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     box-sizing: border-box;
+    min-width: 910px;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, var(--dark-color));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, var(--dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+section {
+    display: block;
+}
+
+
+.spacer {
+    height: 100px;
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, var(--dark-color));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, var(--dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* hamburger styles */
+#hamnav {
+    width: 100%;
+    background: #000;
+    margin-top: 0;
+    position:sticky;
+    z-index: 10;
+    top: 0;
+  }
+  
+  #hamitems { 
+      display: flex; 
+      max-height: 100px;
+    }
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover {
+       background: #401408; 
+        height: 100%;
+    }
+
+    .media-icon > a > img {
+        margin: 2em;
+    }
+
+  #hamnav label, #hamburger { display: none; }
+
+@media screen and (max-width: 970px){    
+.hero-text {
+    font-size: 1em;
+   line-height: .5em;
+    max-width: 95vw;
+}
+
+#hamnav {
+    text-align: left;
+}
+
+ #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  #hamnav label {
+      position: relative;
+      left: 10px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  #hamitems { display: none; }
+
+  #hamnav input:checked ~ #hamitems { display: block; }
+
+  h2 {
+    color:rgb(37, 37, 37);
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(194, 186, 186);
+    line-height: 1em;
+  }
+
+    h4 {
+        color: darkblue;
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .container-hero {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-text {
+        width: 90vw;
+        position: relative;
+        top: -300px;
+    }
+
+    #background, #social {
+        display: block;
+        width: 100vw;
+    }
+
+} /* end of media query */
 
 h2 {
     color:rgb(37, 37, 37);
-    font-size: 4.5em;
+    font-size: 3em;
     text-shadow: 2px 2px rgb(194, 186, 186);
+    line-height: 1em;
+    margin: 0;
 }
 
 h4 {
     color: darkblue;
-    font-size: 1.5em;
+    font-size: 2em;
+    line-height: 1em;
 }
 
+
+
 .card {
-    border: 2px solid black;
     text-align: center;
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 nav {
     position: relative;
-    top: -10px;
+    top: 0;
     background-color: rgb(209, 240, 240);
     padding: 5px;
     text-align: center;
@@ -52,7 +171,7 @@ nav ul {
 }
 
 nav a {
-    margin: 2em;
+    margin: 0;
 }
 
 nav a:hover {
@@ -60,24 +179,24 @@ nav a:hover {
 }
 
 .container {
-    background-color: antiquewhite;
-    width: 99vw;
+    width: 100%;
     margin: 0 auto;
-    background: #1c92d2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f2fcfe, var(--dark-color));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f2fcfe, var(--dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0;
+
 }
 
 .about-text {
-    line-height: 2em;
-    width: 60%;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    width: 80%;
 }
 
 .hero-text {
-    position: absolute;
     top: 35vh;
     left: 25vh;
     max-width: 80vw;
+    margin-top: -700px;
+    margin-left: 200px;
 }
 
 .hero > img {
@@ -91,31 +210,32 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
     background-color: var(--light-color);
-    width: 90vw;
-    margin: 2em auto;
+    width: 95vw;
+    margin: 1em auto;
     filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));
 }
 
-#background > img {
-    margin-top: 2em;
+.image-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+#background > img {}
     border: 2px solid black;
     width: 200px;
-    height: 300px;
-    margin: 2em;
+    height: auto;
+    margin: 1em;
     position: relative;
     top: 200px;
     left: 100px;
 }
 
-.media-icon>img {
-    margin: 2em;
-}
+
 
 
 #repositories {
-    display: flex;
-    justify-content: space-around;
-    width: 90vw;
+    width: 60%;
     margin: 2em auto;
 }
 
@@ -125,54 +245,68 @@ a {
 }
 
 
+
 .repo-description h3:hover {
     color: rgb(94, 91, 91);
+    margin: 1em;
 }
 
-.repository-text{
+.repo-image {
+padding: 2em;
+}
+
+.repo-description{
     line-height: 1.5em;
+     font-size: 1.5em;
+     padding: 2em;
 }
 
 .about-text {
     width: 60vw;
     padding: 2em;
-    margin: 3em;
-}
-
-.repository-images img {
-    filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));   
-    width: 50%;
-    height: 25%;
-    position: relative;
-    right: -150px;
-    top: 200px;
     margin: 1em;
 }
 
-.repo-description {
-    margin-bottom: 10em;
+.virtual-pet, 
+.choose-class,
+.github-page {
+    display: flex;
+    justify-content: space-between;
 }
 
-.social-text {
-    text-align: center;
-}
-
-.social > img {
+.repo-image > img {
     width: 300px;
-    height: 200px;
     margin: 3em;
 }
 
+.social-text {
+    margin: 5em auto;
+    display: relative;
+}
+
+.card img {
+    width: 400px;
+    padding: 3em;
+    border: none;
+}
+
 .quoteContainer {
-    position: relative;
-    left: -300px;
-    width: 50vw;
+    width: 75vw;
     text-align: center;
-    margin: 2em;
+    margin: 2em auto;
     line-height: 1.5em;
     background-color: var(--alt-color);
     padding: 5px;
-    border-left: 4px solid darkgrey;
+    border-left: 8px solid darkgrey;
+}
+
+.quoteContainer p {
+    font-size: 1.5em;
+}
+
+blockquote {
+    font-size: 1.5em;
+    line-height: 1.5em;;
 }
 
 
