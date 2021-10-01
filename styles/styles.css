@@ -1,3 +1,9 @@
+:root {
+    --dark-color: #1c92d2;
+    --light-color: rgb(204, 204, 221);
+    --alt-color: rgb(219, 179, 179);
+}
+
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -8,6 +14,18 @@ h2 {
     color:rgb(37, 37, 37);
     font-size: 4.5em;
     text-shadow: 2px 2px rgb(194, 186, 186);
+}
+
+h4 {
+    color: darkblue;
+    font-size: 1.5em;
+}
+
+.card {
+    border: 2px solid black;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
 }
 
 nav {
@@ -28,15 +46,16 @@ nav a {
 
 
 nav ul {
-    display: inline;
+    display: flex;
     list-style: none;
+    justify-content: space-around;
 }
 
-a {
+nav a {
     margin: 2em;
 }
 
-a:hover {
+nav a:hover {
     color:lightcyan;
 }
 
@@ -45,9 +64,8 @@ a:hover {
     width: 99vw;
     margin: 0 auto;
     background: #1c92d2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #f2fcfe, var(--dark-color));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, var(--dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .about-text {
@@ -63,26 +81,30 @@ a:hover {
 }
 
 .hero > img {
-    max-width: 100%;
+    width: 100%;
     filter: grayscale(100%);
     filter:blur(4px);
     filter:opacity(30%);
-    
 }
 
 #background, #social {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(204, 204, 221);
+    background-color: var(--light-color);
     width: 90vw;
     margin: 2em auto;
     filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));
 }
 
-#background>img {
+#background > img {
     margin-top: 2em;
     border: 2px solid black;
-  
+    width: 200px;
+    height: 300px;
+    margin: 2em;
+    position: relative;
+    top: 200px;
+    left: 100px;
 }
 
 .media-icon>img {
@@ -97,27 +119,60 @@ a:hover {
     margin: 2em auto;
 }
 
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+
+.repo-description h3:hover {
+    color: rgb(94, 91, 91);
+}
+
+.repository-text{
+    line-height: 1.5em;
+}
+
 .about-text {
     width: 60vw;
     padding: 2em;
     margin: 3em;
 }
 
-#background > img {
-    height: 50vh;
+.repository-images img {
+    filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));   
+    width: 50%;
+    height: 25%;
+    position: relative;
+    right: -150px;
+    top: 200px;
+    margin: 1em;
 }
 
-.repositories > img {
-    filter:drop-shadow(8px 8px 10px rgb(68, 68, 68));   
+.repo-description {
+    margin-bottom: 10em;
 }
 
 .social-text {
     text-align: center;
 }
 
-.thank__you--image {
-margin: 2em;
-    width: 20vw;
+.social > img {
+    width: 300px;
+    height: 200px;
+    margin: 3em;
+}
+
+.quoteContainer {
+    position: relative;
+    left: -300px;
+    width: 50vw;
+    text-align: center;
+    margin: 2em;
+    line-height: 1.5em;
+    background-color: var(--alt-color);
+    padding: 5px;
+    border-left: 4px solid darkgrey;
 }
 
 
@@ -140,11 +195,4 @@ footer {
 footer > a {
     text-decoration: none;
     color: white;
-}
-
-.quoteContainer {
-    width: 60vw;
-    text-align: center;
-    margin: 10px;
-    line-height: 1.5em;
 }
