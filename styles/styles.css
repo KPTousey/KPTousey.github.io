@@ -1,6 +1,6 @@
 :root {
     --dark-color: hsl(201, 76%, 47%);
-    --light-color: rgb(204, 204, 221);
+    --light-color: #ccccdd;
     --alt-color: rgb(219, 179, 179);
 }
 
@@ -14,6 +14,10 @@ html {
     background: #1c92d2;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f2fcfe, var(--dark-color));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f2fcfe, var(--dark-color)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-size: 3em;
 }
 
 section {
@@ -50,7 +54,7 @@ section {
     text-align: center;
   }
   #hamitems a:hover {
-       background: #401408; 
+       background: #2b819b; 
         height: 100%;
     }
 
@@ -59,7 +63,7 @@ section {
     }
 
   #hamnav label, #hamburger { display: none; }
-
+ 
 @media screen and (max-width: 970px){    
 .hero-text {
     font-size: 1em;
@@ -84,9 +88,9 @@ section {
     display: inline-block;
     background-color: black;
     color: white;
-    background: #a02620;
+    background: #0f0c0c;
     font-style: normal;
-    font-size: 1.2em;
+    font-size: .7em;
     padding: 10px;
   }
 
@@ -96,7 +100,7 @@ section {
 
   h2 {
     color:rgb(37, 37, 37);
-    font-size: 2em;
+    font-size: 2.5em;
     text-shadow: 2px 2px rgb(194, 186, 186);
     line-height: 1em;
   }
@@ -123,11 +127,11 @@ section {
         width: 100vw;
     }
 
-} /* end of media query */
+} end of media query 
 
 h2 {
     color:rgb(37, 37, 37);
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 2px 2px rgb(194, 186, 186);
     line-height: 1em;
     margin: 0;
@@ -135,8 +139,8 @@ h2 {
 
 h4 {
     color: darkblue;
-    font-size: 2em;
-    line-height: 1em;
+    font-size: 1.5em;
+    line-height: 2em;
 }
 
 
@@ -192,18 +196,17 @@ nav a:hover {
 }
 
 .hero-text {
-    top: 35vh;
+    display: relative;
+    top: 100px;
     left: 25vh;
     max-width: 80vw;
     margin-top: -700px;
     margin-left: 200px;
 }
 
-.hero > img {
-    width: 100%;
-    filter: grayscale(100%);
-    filter:blur(4px);
-    filter:opacity(30%);
+
+.hero {
+    width: 60vw;
 }
 
 #background, #social {
@@ -221,7 +224,7 @@ nav a:hover {
     margin-left: 1em;
 }
 
-#background > img {}
+#background > img {
     border: 2px solid black;
     width: 200px;
     height: auto;
@@ -230,9 +233,6 @@ nav a:hover {
     top: 200px;
     left: 100px;
 }
-
-
-
 
 #repositories {
     width: 60%;
@@ -244,11 +244,10 @@ a {
     color: darkblue;
 }
 
-
-
 .repo-description h3:hover {
     color: rgb(94, 91, 91);
     margin: 1em;
+    height: 1.5em;
 }
 
 .repo-image {
@@ -265,6 +264,7 @@ padding: 2em;
     width: 60vw;
     padding: 2em;
     margin: 1em;
+    line-height: 1.5em;
 }
 
 .virtual-pet, 
@@ -272,6 +272,7 @@ padding: 2em;
 .github-page {
     display: flex;
     justify-content: space-between;
+    font-size: .9em;
 }
 
 .repo-image > img {
@@ -317,6 +318,10 @@ blockquote {
 #small>a {
     text-decoration: none;
     color: white;
+}
+
+.portfolio-ref {
+    text-align: center;
 }
 
 footer {
